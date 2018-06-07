@@ -6,12 +6,24 @@ import ButtonsContainer from '../containers/ButtonsContainer'
 import HogsContainer from '../containers/HogsContainer'
 
 class App extends Component {
+
+  state = {
+    renderOrder: hogs
+  }
+
+
+  changeRenderOrder = (hoggs) => {
+    this.setState({
+      renderOrder: hoggs
+    })
+  }
+
   render() {
     return (
       <div className="App">
         < Nav />
-        < ButtonsContainer />
-        < HogsContainer hogs={hogs}/>
+      < ButtonsContainer hogs={hogs} actiony={this.changeRenderOrder}/>
+      < HogsContainer hogs={this.state.renderOrder}/>
       </div>
     )
   }

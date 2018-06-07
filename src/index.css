@@ -5,10 +5,12 @@ body {
 }
 
 .porker{
-  width:200px;
-  height:200px;
-  background-color:blue;
   margin-left:50px;
   margin-right:50px;
   display:inline-block;
+  margin-bottom:30px;
+}
+
+.poof{
+  display: none !important;
 }
